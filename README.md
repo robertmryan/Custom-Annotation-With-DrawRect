@@ -2,7 +2,7 @@
 
 --
 
-This is an demonstration of a custom `MKAnnotationView` subclass that is using a custom `drawRect` method.
+This is an demonstration of a custom `MKAnnotationView` subclass that is using a custom `drawRect` method. This is illustrated in [this StackOverflow discussion](http://stackoverflow.com/a/30415714/1271826).
 
 This is for illustrative purposes only.
 

@@ -14,6 +14,8 @@
 		83A35AA61B14A9C9005E763C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83A35AA51B14A9C9005E763C /* Images.xcassets */; };
 		83A35AA91B14A9C9005E763C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A35AA71B14A9C9005E763C /* LaunchScreen.xib */; };
 		83A35AB51B14A9C9005E763C /* CustomAnnotationWithDrawRectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A35AB41B14A9C9005E763C /* CustomAnnotationWithDrawRectTests.m */; };
+		83A35AC01B14AF42005E763C /* CustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A35ABF1B14AF42005E763C /* CustomAnnotationView.m */; };
+		83A35AC21B14AF4B005E763C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A35AC11B14AF4B005E763C /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		83A35AAE1B14A9C9005E763C /* CustomAnnotationWithDrawRectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomAnnotationWithDrawRectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A35AB31B14A9C9005E763C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83A35AB41B14A9C9005E763C /* CustomAnnotationWithDrawRectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotationWithDrawRectTests.m; sourceTree = "<group>"; };
+		83A35ABE1B14AF42005E763C /* CustomAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotationView.h; sourceTree = "<group>"; };
+		83A35ABF1B14AF42005E763C /* CustomAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotationView.m; sourceTree = "<group>"; };
+		83A35AC11B14AF4B005E763C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		83A35AC31B14B3FB005E763C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83A35AC21B14AF4B005E763C /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +70,7 @@
 		83A35A8C1B14A9C9005E763C = {
 			isa = PBXGroup;
 			children = (
+				83A35AC31B14B3FB005E763C /* README.md */,
 				83A35A971B14A9C9005E763C /* CustomAnnotationWithDrawRect */,
 				83A35AB11B14A9C9005E763C /* CustomAnnotationWithDrawRectTests */,
 				83A35A961B14A9C9005E763C /* Products */,
@@ -85,6 +93,8 @@
 				83A35A9D1B14A9C9005E763C /* AppDelegate.m */,
 				83A35A9F1B14A9C9005E763C /* ViewController.h */,
 				83A35AA01B14A9C9005E763C /* ViewController.m */,
+				83A35ABE1B14AF42005E763C /* CustomAnnotationView.h */,
+				83A35ABF1B14AF42005E763C /* CustomAnnotationView.m */,
 				83A35AA21B14A9C9005E763C /* Main.storyboard */,
 				83A35AA51B14A9C9005E763C /* Images.xcassets */,
 				83A35AA71B14A9C9005E763C /* LaunchScreen.xib */,
@@ -96,6 +106,7 @@
 		83A35A981B14A9C9005E763C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				83A35AC11B14AF4B005E763C /* MapKit.framework */,
 				83A35A991B14A9C9005E763C /* Info.plist */,
 				83A35A9A1B14A9C9005E763C /* main.m */,
 			);
@@ -168,6 +179,11 @@
 				TargetAttributes = {
 					83A35A941B14A9C9005E763C = {
 						CreatedOnToolsVersion = 6.3.2;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					83A35AAD1B14A9C9005E763C = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -221,6 +237,7 @@
 			files = (
 				83A35AA11B14A9C9005E763C /* ViewController.m in Sources */,
 				83A35A9E1B14A9C9005E763C /* AppDelegate.m in Sources */,
+				83A35AC01B14AF42005E763C /* CustomAnnotationView.m in Sources */,
 				83A35A9B1B14A9C9005E763C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				INFOPLIST_FILE = CustomAnnotationWithDrawRect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -357,6 +375,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				INFOPLIST_FILE = CustomAnnotationWithDrawRect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
